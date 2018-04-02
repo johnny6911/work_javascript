@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Insert title here</title>
+</head>
+<body>
+	
+	<script>
+		var myArray = new Array();
+		myArray[0] = "apple";
+		myArray[99] = "banana";
+		
+		for (var i = 0; i < myArray.length; i++){
+			console.log(myArray[i]); // 항목이 100개가 있음
+		}
+		
+		// concat()
+		var x = [1, 2, 3];
+		var y = [4, 5, 6];
+		var joined = x.concat(y);
+		console.log(x);
+		console.log(joined);
+		
+		// indexOf()
+		var fruits = ["apple", "banana", "grape"];
+		console.log(fruits.indexOf("banana"));
+		
+		// Stack: push(), pop()
+		var numbers = [1, 2, 3, 4, 5];
+		numbers.push(6);
+		console.log(numbers);
+		var item = numbers.pop();
+		console.log(numbers);
+		
+		//Queue: shift();
+		numbers = [1, 2, 3, 4, 5, 6, 7];
+		item = numbers.shift(); // shift를 호출하면 제일 먼저 들어간 1이 나옴, 그리고 1은 item이라는 변수에 들어가있음
+		console.log('item: ' + item); // 1이 출력
+		console.log(numbers); // 2 3 4 5 6 7이 출력
+		numbers.push(10); // unshift와 같음
+		console.log(numbers);
+		item = numbers.shift();
+		console.log('item: ' + item);
+	</script>
+</body>
+</html>

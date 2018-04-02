@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h3>덧셈 계산기</h3>
+	<form name="myform" action="..." method="post">
+		<div>첫번째 정수: <input id="x"></div>
+		<div>두번째 정수: <input id="y"></div>
+		<div>합계: <input id="sum"></div>
+		<input type="button" value="계산" onclick="calc();">
+	</form>
+	
+	<script>/* 스크립트는 맨 마지막에 작성하는것이 원칙 */
+		/* 함수 */
+		function clac(){
+			/*
+				getElementById: 인자(파라메터)에 입력한 아이디 값으로 앨리먼트를 찾는다
+				앨리먼트.value: value의 속성(attribute) 값을 가져온다
+			*/
+			var x = document.getElementById("x").value;
+			var y = document.getElementById("y").value;
+			var sum;
+			sum = parseInt(x) + parseInt(y); /* 스트링 타입인 두수를 더하기 위해서는 파스인트로 변환해줘야함 */
+			document.getElementById("sum").value = sum;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Insert title here</title>
+</head>
+<body>
+	<button onclick="showDialog()">대화</button>
+	<button onclick="greeting('홍길동', '부장', '서울시')">누르셈!</button>
+	<button onclick="greeting('홍길동', '부장')">누르셈</button>
+	<button onclick="greeting('홍길동')">누르셈</button>
+	
+	<script>
+		function showDialog(){ // 함수라고 부름
+			window.alert("ㅎㅇ?"); //alert 메소드(객체(window:내장객체) 내부에 있기때문에)라고 부름
+		}
+		
+		/* function greeting(name, position, address){ // 매게변수가 2개인 함수
+			// argument: 내장객체 (함수 내부에서 사용가능)
+			if (arguments.length == 1){
+				alert(name + "님을 환영합니다");
+			}
+			else if (arguments.length == 2){
+				alert(name + " " + position + "님을 환영합니다");
+			}
+			else if (arguments.length == 3){
+				alert(name + " " + position + " " + address + "님을 환영합니다");
+			}
+		} */
+		
+		function greeting(){ // 파라미터를 무제한으로 넣을수 있음,자바스크립트에서는 파라미터는 형식적으로 만듬, 한마디로 자유도가 높음
+			// argument: 내장객체 (함수 내부에서 사용가능)
+			if (arguments.length == 1){
+				alert(arguments[0] + "님을 환영합니다");
+			}
+			else if (arguments.length == 2){
+				alert(arguments[0] + " " + arguments[1] + "님을 환영합니다");
+			}
+			else if (arguments.length == 3){
+				alert(arguments[0] + " " + arguments[1] + " " + arguments[2] + "님을 환영합니다");
+			}
+		}
+		
+		// 무명 함수 (anonymous function)
+		var anonymous = function(){
+			alert("무명함수 호출");
+		};
+		anonymous();
+		
+		(function(){ //한번 호출하고 끝나는것
+			alert("무명함수1 호출");
+		})();
+		
+		// 함수의 반환값 (return)
+		function sub(){ // 리턴타입이 없는데 리턴이 됨
+			var x;
+			x = 1;
+			return x;
+		}
+		var value = sub();
+		alert(value);
+	</script>
+</body>
+</html>
