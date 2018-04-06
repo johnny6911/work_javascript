@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<button id="btnshow">Show it</button>
+	<button id="btnToggle">Toggle</button>
+	<button id="btnAnimate">Animate</button>
+	
+	<img id="dog" src="_infinity.jpg"
+		alt="" width="120" height="100" style="display: none" />
+	
+	<img id="dog2" src="_infinity.jpg"
+		alt="" width="120" height="100" style="position: relative" />
+	
+	<script src="js/jquery-3.3.1.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("#btnshow").click(function(){ //버튼에 클릭 이벤트 달아줌
+			$("#dog").show("4000"); // 느리게 뜨라고 slow, 혹은 밀리세컨드로 입력
+		});
+		
+		$("#btnToggle").click(function(){
+			$("#dog").toggle();
+		});
+		
+		$("#btnAnimate").click(function(){
+			$("#dog2").animate({ 
+				left: '100px', 
+	      	    opacity: '0.5',
+	      	    width: '150px' });
+		});
+	});
+	</script>
+</body>
+</html>

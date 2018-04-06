@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<a href="#" onclick="maxopen('http://www.google.com', 'resize=1, scrollbars=1, status= 1'); return false">//기본동작을 막기위해 리턴 false 사용 
+		전체화면 보기</a>
+
+	<script>
+		function maxopen(url, winattributes){ // url은 구글주소, 호출할때 maxopen의 파라미터를 넘겨주는것
+			var maxwindow = window.open(url, "", winattributes) // 현재는 이름 없는 윈도우 지정한것
+			maxwindow.moveTo(0, 0);
+			maxwindow.resizeTi(screen.availWidth, screen.availHeight)
+		}
+	</script>
+	
+</body>
+</html>

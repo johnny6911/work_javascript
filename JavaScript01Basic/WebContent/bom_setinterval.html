@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Insert title here</title>
+</head>
+<body onload="changeColor();">
+	<div id="target">
+		<p>This is a Text</p>
+	</div>
+	<button onclick="stopTextColor();">중지</button>
+	
+	<script>
+		var id;
+		function changeColor(){
+			id = setInterval(flashText, 500); // 정지시키려면 반환값을 저장한다
+		}
+		function flashText(){
+			var elem = document.getElementById("target");
+			elem.style.color = (elem.style.color == "red") ? "blue" : "red";
+			elem.style.backgroundColor =
+				(elem.style.backgroundColor == "blue") ? "red" : "blue";
+		}
+		function stopTextColor(){
+			clearInterval(id); // 반환값을 이용하여 주기적 호출을 중지한다
+		}
+	</script>
+</body>
+</html>
