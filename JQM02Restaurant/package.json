@@ -1,0 +1,17 @@
+{
+  "name": "com.koitt.restaurant",
+  "version": "0.0.1",
+  "displayName": "Restaurant",
+  "cordova": {
+    "platforms": [
+      "windows"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    }
+  },
+  "dependencies": {
+    "cordova-plugin-whitelist": "^1.3.3",
+    "cordova-windows": "^6.0.0"
+  }
+}
